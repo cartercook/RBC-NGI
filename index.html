@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Simple Map</title>
+    <h1 id="startLat">BLAH</h1>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
@@ -16,29 +17,9 @@
   </head>
   <body>
     <div id="map"></div>
-    <script>
-      var map;
-      var startLat;
-      var startLon;
-      function initMap() {
-        window.onload = function() {
-          var startPos;
-          var geoSuccess = function(position) {
-            startPos = position;
-            startLat = startPos.coords.latitude;
-            startLon = startPos.coords.longitude;
-          };
-          navigator.geolocation.getCurrentPosition(geoSuccess);
-
-        };
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: startLat, lng: startLon},
-          zoom: 8
-        });
-      }
-    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD585cQgXpC629pKIkZvjTVieJVu4xzH24&callback=initMap"
     async defer></script>
+    <script type="text/javascript" src="map.js"></script>
+      
   </body>
 </html>
