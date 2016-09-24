@@ -2,20 +2,54 @@ var database = {
     
     "companies": [
         {
-            "name": "HTML Tutorial",
-            "longitude": "4",
-            "latitude": "5"
+            "id": 1,
+            "name": "Joe's Barbershop",
+            "location": {
+                "longitude": "4",
+                "latitude": "5"
+            },
+            "promotions": [
+                {
+                    "productName": "Free Haircut",
+                    "points": 500,
+                }
+            ]
+        }
+            
+        },
+        {
+            "id": 2,
+            "name": "Tracey's Eatery",
+            "location": {
+                "longitude": "4",
+                "latitude": "5"
+            },
+            "promotions": [
+                {
+                    "productName": "Free Brisky Biscuit",
+                    "points": 500,
+                },
+                {
+                    "productName": "Free Coffee Upsize",
+                    "points": 250
+                }
+            ]
         }
     ],
     
     "users": [
         {
-            "name": "Noam Jacobson",
+            "username": "Noam",
             "email": "noam3jacobson@gmail.com",
-            "password": "noamj"
+            "password": "noamj",
+            "totalScore": 100,
+            "myCompanies": [
+                "id": 1,
+                "score": 40
+            ]
         },
         {
-            "name": "Carter Cook",
+            "username": "Carter",
             "email": "carter@gmail.com",
             "password": "cart"
         }

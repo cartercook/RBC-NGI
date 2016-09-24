@@ -1,51 +1,96 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="../json/db.js"></script>
+        <script src="../json/dbManager.js"></script>
+        
+        
          <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-        <link href='../stylesheets/login.css' rel='stylesheet' type='text/css'>
+        <link href='../stylesheets/login/login.css' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../scripts/login/login.js"></script>
+        
     </head>
 <body>
-    <div class="middlePage">
-    <div class="page-header">
-      <h1 class="logo">Techulus <small>Welcome to our place!</small></h1>
-    </div>
-
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">Please Sign In</h3>
-      </div>
-      <div class="panel-body">
-
-      <div class="row">
-
-    <div class="col-md-5" >
-    <a href="#" class='button facebook'>Sign up with Facebook</a><br/>
-    <a href="#" class='button gmail'>Sign up with Gmail</a><br/>
-    <a href="#" class='button twitter'>Sign up with Twitter</a>
-    </div>
-
-        <div class="col-md-7" style="border-left:1px solid #ccc;height:160px">
-    <form class="form-horizontal">
-    <fieldset>
-
-        <div class="spacing">
-            <input id="textinput" name="textinput" type="text" placeholder="Enter User Name" class="form-control input-md"></div>
-        <div class="spacing">
-            <input id="textinput" name="textinput" type="text" placeholder="Enter Password" class="form-control input-md"></div>
-        <div class="spacing"><input type="checkbox" name="checkboxes" id="checkboxes-0" value="1"><small> Remember me</small></div>
-      <div class="spacing"><a href="#"><small> Forgot Password?</small></a><br/></div>
-      <button id="singlebutton" name="singlebutton" class="btn btn-info btn-sm pull-right">Sign In</button>
-
-
-    </fieldset>
-    </form>
-    </div>
-
-    </div>
-
-    </div>
-    </div>
-
-    </div>
+    <div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="" method="get" role="form" style="display: block;">
+                                    <div class="form-group"><a href="#" class='button facebook'>Sign in with Facebook</a></div>
+                                    <div class="form-group"><a href="#" class='button gmail'>Sign in with Gmail</a></div>
+                                    <div class="form-group"><a href="#" class='button twitter'>Sign in with Twitter</a></div>
+									<div class="form-group">
+										<input type="text" name="username" id="username-login" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password-login" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                                    <div class="form-group"><a href="#" class='button facebook'>Sign up with Facebook</a></div>
+                                    <div class="form-group"><a href="#" class='button gmail'>Sign up with Gmail</a></div>
+                                    <div class="form-group"><a href="#" class='button twitter'>Sign up with Twitter</a></div>
+									<div class="form-group">
+										<input type="text" name="username" id="username-register" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email-register" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password-register" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password-register" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
