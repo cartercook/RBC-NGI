@@ -6,9 +6,10 @@
     <script src="../scripts/main.js"></script>
     <script src="../json/db.js"></script>
     <script src="../json/dbManager.js"></script>
-    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
+    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >	
 
     <!-- enter your scripts and styles here -->
+	<link href="../stylesheets/searchbar.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<link rel="stylesheet" href="../stylesheets/businessPage/deck.css">
         <script src='../scripts/businessList/businessList.js'></script>
@@ -88,6 +89,20 @@
         </div>
         <div class="col-sm-6 the-cards">
             <div class="card-deck-wrapper">
+		    
+		    
+		    <!--adding search bar -->
+		   <div class="input-group">
+  				<input type="text" class="form-control" name="topic" id="searchBox" placeholder="Search for...">
+  				<span class="input-group-btn">
+    				<button class="btn btn-primary" type="button" id="go">Go!</button></span>
+		    </div>
+			
+		    <!--adding categories -->
+		    <div class="icons">
+			<img class="img-responsive" src="http://s13.postimg.org/jhv40g40z/image.png">
+		    	<img class="img-responsive" src="http://s13.postimg.org/cfx6e90f7/image.png">
+		    </div>
                 <div class="card-deck">
                     <div class='card'>
                         <div class='card-background' data-src='../images/front%20pic.png'>
@@ -126,7 +141,7 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 44.2312, lng: 76.4860},
-          zoom: 17,
+          zoom: 14,
           
           styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
           
