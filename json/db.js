@@ -5,6 +5,7 @@ var database = {
             "id": "1",
 			"name": "La Carnita",
 			"description": "Former mobile street-food spot now in a fixed space, offering a small menu of creative tacos & art.",
+            "tags": ["Restaurant", "Mexican", "Toronto"],
 			"address": "501 College St, Toronto, ON M6G 1A5",
 			"phone": "(416) 964-1555",
 			"website": "www.lacarnita.com/",
@@ -14,10 +15,15 @@ var database = {
 				"longitude": "43.647157",
 				"latitude": "-79.390147"
 			},
+            "dollarsPerCrown": 10,
 			"promotions": [
 				{
-					"productName": "Free Haircut",
-					"points": 500,
+					"productName": "Taco",
+					"points": 5,
+				},
+                {
+					"productName": "Drink",
+					"points": 8,
 				}
 			]
 		},
@@ -25,6 +31,7 @@ var database = {
             "id": "2",
 			"name": "Drake General Store",
 			"description": "A traditional hotel gift shop, a classic general store, a flea market stand, and a museum shop all rolled into one.",
+            "tags": [],
 			"address": "1151 Queen St W, Toronto, ON M6J",
 			"phone":"(647) 346-0742",
 			"website": "http://www.drakegeneralstore.ca/",
@@ -34,6 +41,7 @@ var database = {
 				"longitude": "43.651916",
 				"latitude": "-79.380032"
 			},
+            "dollarsPerCrown": 5,
 			"promotions": [
 				{
 					"productName": "Free Brisky Biscuit",
@@ -49,6 +57,7 @@ var database = {
             "id": "3",
 			"name": "Monkey's Paw Bookstore",
 			"description": "Funky store featuring rare & unique 20th-century printed items, with a used-book vending machine.",
+            "tags": [],
 			"address": "1267 Bloor St W, Toronto, ON M6H 1N7",
 			"phone": "(416) 531-2123",
 			"website": "www.monkeyspaw.com/",
@@ -58,11 +67,23 @@ var database = {
 				"longitude": "43.658428",
 				"latitude": "-79.441887"
 			},
+            "dollarsPerCrown": 20,
+            "promotions": [
+				{
+					"productName": "Free Brisky Biscuit",
+					"points": 500,
+				},
+				{
+					"productName": "Free Coffee Upsize",
+					"points": 250
+				}
+			]
 		},
 		{
             "id": "4",
 			"name": "Snakes and Lattes",
 			"description": "Lively cafe with a huge collection of board & card games, plus sandwiches, salads & drinks.",
+            "tags": [],
 			"address": "600 Bloor St W, Toronto, ON M6G 1K4",
 			"phone": "(647) 342-9229",
 			"website": "www.snakesandlattes.com",
@@ -72,6 +93,17 @@ var database = {
 				"longitude": "43.664788",
 				"latitude": "-79.413167"
 			},
+            "dollarsPerCrown": 15,
+            "promotions": [
+				{
+					"productName": "Free Brisky Biscuit",
+					"points": 500,
+				},
+				{
+					"productName": "Free Coffee Upsize",
+					"points": 250
+				}
+			]
 		}
 	],
 	

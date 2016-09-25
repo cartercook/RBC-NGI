@@ -114,7 +114,7 @@ $widthWide: 700px;
     transform: translateX(-1em);
     width: 70%;
     left: 30%;
-    
+    z-index: 1;
 }
 
 .card .card-title h4 {
@@ -146,6 +146,7 @@ $widthWide: 700px;
     position: relative;
     float: right;
     width: 70%;
+    z-index: 1;
     margin: 0 1em 2em 0;
 }
 

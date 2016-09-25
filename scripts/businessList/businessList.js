@@ -3,17 +3,24 @@ $(document).ready(function () {
     function populateBusinessCards() {
         var $cardDeck = $('div.card-deck');
         
-        var $card = $('<div class="card">' +
-                      '<img class="card-img-top">' +
-				'<div class="card-block row">' +
-					'<h4 class="col-xs-6 card-title"></h4>' +
-					'<div class="col-xs-6">' +
-						'<div class="text-xs-center"></div>' + 
-						'<progress class="progress" max="500"></progress>' +
-                        '<div class="heart-it"></div>' +
-					'</div>' +
-				'</div>' +
-			'</div>');
+        var $card = $("<div class='card'>" +
+                        "<div class='card-background'></div>" +
+                        "<div class='card-overlay'>" +
+                            "<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $10</div>" +
+                            "<div class='card-title'>" +
+                                "<h4>name</h4>" +
+                                "<h5>minidescription</h5>" +
+                            "</div>" +
+                            "<div class='promotions'>" +
+                            "</div>" +
+                            "<button class='heart'><i class='fa fa-heart'></i></button>" +
+                       "</div>" +
+                    "</div>");
+        var $progressBar = $("<div class='progress-bar'>" +
+                                    "<div class='text-cost'>5 <img src='../images/Shape%202.png' style='transform: translateY(-2px);'> /Taco</div>" +
+                                    "<div class='inner-progress'></div>" +
+                                    "<div class='text-progress'>5/7</div>" +
+                                "</div>");
         
         var businesses = getCompanies();
         var user = getUser(current_username, current_password);
@@ -22,6 +29,19 @@ $(document).ready(function () {
             var business = businesses[i];
             var picture = '../images/' + business.image;
             var name = business.name;
+            var tagsArr = business.tags;
+            var tags = '';
+            
+            for (var j = 0; j < tagsArr.length; j ++) {
+                tags += tagsArr[j] + ' | ';
+            }
+            
+            tags = tags.substr(0, tags.length - 2);
+            
+            console.log(business);
+            
+            var promotions = business.promotions;
+            var dollarsPerPoint = business.dollarsPerCrown;
             var points = 0;
             
             for (var j = 0; j < user.myCompanies.length; j ++) {
@@ -32,13 +52,31 @@ $(document).ready(function () {
             } 
             
             var $cardClone = $card.clone();
-            $cardClone.find('img.card-img-top').attr('src', picture);
-            $cardClone.find('h4.col-xs-6').html(name);
-            $cardClone.find('div.text-xs-center').html(points + ' Points');
-            $cardClone.find('progress').attr('value', points);
+            $cardClone.find('div.card-background').css('background-image', 'url(' + picture + ');');
+            $cardClone.find('div.promotionValue').html("<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $" + dollarsPerPoint + "</div>");
+            $cardClone.find('h4').html(name);
+            $cardClone.find('h5').html(tags);
+            
+            for (var j = 0; j < promotions.length; j ++) {
+                var promotion = promotions [j];
+                
+                console.log(promotion);
+                
+                var promoName = promotion.productName;
+                var promoPoints = promotion.points;
+                var promoPercentage = Math.round(Math.min(points * 100.0 / promoPoints, 100));
+                
+                var $progressClone = $progressBar.clone();
+                $progressClone.find('.text-cost').html(promoPoints + " <img src='../images/Shape%202.png' style='transform: translateY(-2px);'> /" + promoName);
+                $progressClone.find('.text-progress').html(points + '/' + promoPoints);
+                $progressClone.find('.inner-progress').css('width', promoPercentage + '%');
+                
+                $cardClone.find('.promotions').append($progressClone);
+                
+            }
+            
             $cardDeck.append($cardClone);
         }
-        
     }
     
     populateBusinessCards();
