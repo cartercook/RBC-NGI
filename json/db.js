@@ -36,7 +36,7 @@ var database = {
 			"phone":"(647) 346-0742",
 			"website": "http://www.drakegeneralstore.ca/",
 			"hours":"Saturday	10AM–9PM\nSunday	11AM–6PM\nMonday	10AM–9PM\nTuesday	10AM–9PM\nWednesday	10AM–9PM\nThursday	10AM–9PM\nFriday	10AM–9PM",
-			"image": "drakeGeneralStore.jpg",
+			"image": "front%20pic.png",
 			"location": {
 				"longitude": "43.651916",
 				"latitude": "-79.380032"
@@ -45,11 +45,11 @@ var database = {
 			"promotions": [
 				{
 					"productName": "Free Brisky Biscuit",
-					"points": 500,
+					"points": 5,
 				},
 				{
 					"productName": "Free Coffee Upsize",
-					"points": 250
+					"points": 8
 				}
 			]
 		},
@@ -71,11 +71,11 @@ var database = {
             "promotions": [
 				{
 					"productName": "Free Brisky Biscuit",
-					"points": 500,
+					"points": 10,
 				},
 				{
 					"productName": "Free Coffee Upsize",
-					"points": 250
+					"points": 12
 				}
 			]
 		},
@@ -97,11 +97,11 @@ var database = {
             "promotions": [
 				{
 					"productName": "Free Brisky Biscuit",
-					"points": 500,
+					"points": 7,
 				},
 				{
 					"productName": "Free Coffee Upsize",
-					"points": 250
+					"points": 15
 				}
 			]
 		}
@@ -116,7 +116,7 @@ var database = {
 			"myCompanies": [
                 {
                     "id": "1",
-                    "score": 40
+                    "score": 7
                 }
 			]
 		},

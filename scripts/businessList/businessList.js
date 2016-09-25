@@ -17,10 +17,10 @@ $(document).ready(function () {
                        "</div>" +
                     "</div>");
         var $progressBar = $("<div class='progress-bar'>" +
-                                    "<div class='text-cost'>5 <img src='../images/Shape%202.png' style='transform: translateY(-2px);'> /Taco</div>" +
-                                    "<div class='inner-progress'></div>" +
-                                    "<div class='text-progress'>5/7</div>" +
-                                "</div>");
+                "<div class='text-cost'>5 <img src='../images/Shape%202.png' style='transform: translateY(-2px);'> /Taco</div>" +
+                "<div class='inner-progress'></div>" +
+                "<div class='text-progress'>5/7</div>" +
+            "</div>");
         
         var businesses = getCompanies();
         var user = getUser(current_username, current_password);
@@ -51,8 +51,10 @@ $(document).ready(function () {
                 }
             } 
             
+            console.log(picture);
+            
             var $cardClone = $card.clone();
-            $cardClone.find('div.card-background').css('background-image', 'url(' + picture + ');');
+            $cardClone.find('div.card-background').css('background-image', 'url(' + picture + '), linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1))');
             $cardClone.find('div.promotionValue').html("<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $" + dollarsPerPoint + "</div>");
             $cardClone.find('h4').html(name);
             $cardClone.find('h5').html(tags);

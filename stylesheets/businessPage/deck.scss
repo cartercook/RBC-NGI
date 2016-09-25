@@ -103,10 +103,15 @@ $widthWide: 700px;
     background-image: url(../../images/front%20pic.png);
     background-size: cover;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .card .card-overlay {
     color: #fff;
+    height: 100%;
 }
 
 .card-title {
@@ -179,6 +184,7 @@ $widthWide: 700px;
     height: 1.6em;
     background-color: $color1;
     margin-bottom: 0.5em;
+    position: relative;
     
     &last-child {
         margin-bottom: 0;

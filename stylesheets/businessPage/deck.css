@@ -22,10 +22,15 @@
 .card .card-background {
   background-image: url(../../images/front%20pic.png);
   background-size: cover;
-  height: 100%; }
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
 
 .card .card-overlay {
-  color: #fff; }
+  color: #fff;
+  height: 100%; }
 
 .card-title {
   position: relative;
@@ -86,7 +91,8 @@
   width: 100%;
   height: 1.6em;
   background-color: #002888;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  position: relative; }
   .card .progress-barlast-child {
     margin-bottom: 0; }
 
