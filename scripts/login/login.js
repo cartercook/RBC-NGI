@@ -28,9 +28,14 @@ $(function() {
 //            console.log(username);
 //            console.log(password);
             //go to logged in page
+            window.location = '/RBC-NGI/pages/discover.html';
         } else {
             console.log('null');
         }
         //return false;
+    });
+    
+    $('#register-form').submit(function(e) {
+        window.location = '/RBC-NGI/pages/discover.html';
     });
 });
