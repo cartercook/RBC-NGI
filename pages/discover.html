@@ -6,8 +6,7 @@
     <script src="../scripts/main.js"></script>
     <script src="../json/db.js"></script>
     <script src="../json/dbManager.js"></script>
-    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
-    <link href="../stylesheets/searchbar.css" rel="stylesheet" type="text/css" >	
+    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >	
 
     <!-- enter your scripts and styles here -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -56,21 +55,12 @@
     <div class='row'>
         <div class="col-sm-6">
             <div class="card-deck-wrapper">
-		    <!--adding search bar -->
-			    <form class="search_bar">
-	  <div class="search_dropdown" style="width: 16px;">
-	    <span>All</span>
-	    <ul>
-	      <li class="selected">All</li>
-	      <li>Books</li>
-	      <li>Articles</li>
-	    </ul>
-	  </div>
-
-	  <input type="text" placeholder="Search for anything" />
-
-	  <button type="submit" value="Search">Search</button>
-	</form>
+		    
+		    
+		    <!--adding search bar-->
+  				<input type="text" class="form-control" name="topic" id="searchBox" placeholder="Search for...">
+  				<span class="input-group-btn">
+    				<button class="btn btn-primary" type="button" id="go">Go!</button>
 		    <!--end search bar-->
                 <div class="card-deck">
                 </div>
