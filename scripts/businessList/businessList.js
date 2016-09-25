@@ -3,7 +3,7 @@ $(document).ready(function () {
     function populateBusinessCards() {
         var $cardDeck = $('div.card-deck');
         
-        var $card = $("<div class='card'>" +
+        var $card = $("<div class='card' data-toggle='modal' data-target='#myModal'>" +
                         "<div class='card-background'></div>" +
                         "<div class='card-overlay'>" +
                             "<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $10</div>" +
