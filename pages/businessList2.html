@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Royal Rewards</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- JQUERY -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- MASONRY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+    <link rel="stylesheet" type="text/css" href="businessList2.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="image">
+        <img class="img-fluid" src="../images/drakeGeneralStore.jpg">
+        <text>Stuff</text>
+      </div>
+      <div class="image">
+        <img class="img-fluid" src="../images/laCarnita.jpg">
+      </div>
+      <div class="image">
+        <img class="img-fluid" src="../images/monkeysPaw.jpg">
+      </div>
+      <div class="image">
+        <img class="img-fluid" src="../images/snakesAndLattes.jpg">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    $( function() {
+      $('#container').masonry({
+        itemSelector: '.image';
+      });
+    });
+    </script>
+  </body>
