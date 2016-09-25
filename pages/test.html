@@ -69,10 +69,8 @@
         // Let's add markers
         
         var businesses = getCompanies();
-          console.log(current_username);
-          console.log(current_password);
         var user = getCurrentUser();
-          console.log(user);
+          console.log(businesses);
         
         for (var i = 0; i < businesses.length; i++) {
             var colour = blue;
@@ -87,16 +85,16 @@
                 }
             }
             
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(lat, lon),
-                    map: map,
-                    title: name,
-                    icon: {
-                      size: new google.maps.Size(40, 51),
-                      scaledSize: new google.maps.Size(40, 51),
-                      url: colour
-                    }
-                });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(lat, lon),
+                map: map,
+                title: name,
+                icon: {
+                  size: new google.maps.Size(40, 51),
+                  scaledSize: new google.maps.Size(40, 51),
+                  url: colour
+                }
+            });
         }
           
                
