@@ -19,7 +19,7 @@ $(document).ready(function () {
         
         for (var i = 0; i < businesses.length; i ++ ) {
             var business = businesses[i];
-            var picture = business.image;
+            var picture = '../images/' + business.image;
             var name = business.name;
             var points = 0;
             
@@ -31,10 +31,12 @@ $(document).ready(function () {
             } 
             
             var $cardClone = $card.clone();
-            $cardClone.
-            var $cardDeck.append($cardClone);
+            $cardClone.find('img.card-img-top').attr('src', picture);
+            $cardClone.find('h4.col-xs-6').html(name);
+            $cardClone.find('div.text-xs-center').html(points + ' Points');
+            $cardClone.find('progress').attr('value', points);
+            $cardDeck.append($cardClone);
         }
-        
         
     }
     

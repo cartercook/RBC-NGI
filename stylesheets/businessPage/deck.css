@@ -1,0 +1,14 @@
+.card-deck .card {
+	width: 300px;
+	display: inline-block;
+}
+
+.card-block .row .col-xs-6 {
+	width: 50%;
+	padding-right: 10;
+	padding-left: 10;
+}
+
+.card-img-top {
+    width: 100%;
+}
