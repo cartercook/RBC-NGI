@@ -47,7 +47,3 @@ function getUser(name, password) {
     return null;
 }
 
-function getCurrentUser () {
-    
-}
-
