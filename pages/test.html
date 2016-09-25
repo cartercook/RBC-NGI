@@ -79,6 +79,15 @@
             var id = business.id;
             var lat = parseFloat(business.location.latitude);
             var lon = parseFloat(business.location.longititude);
+            
+            console.log(colour);
+            console.log(business);
+            
+            console.log(name);
+            console.log(id);
+            console.log(lat);
+            console.log(lon);
+            
             for (var j =0; j< user.myCompanies.length; j++){
                 if (id === user.myCompanies[j].id){
                     colour = yellow;
