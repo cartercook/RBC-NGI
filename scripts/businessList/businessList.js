@@ -15,14 +15,21 @@ $(document).ready(function () {
 			'</div>');
         
         var businesses = getCompanies();
-        var user = getUser();
+        var user = getUser(current_username, current_password);
         
         for (var i = 0; i < businesses.length; i ++ ) {
             var business = businesses[i];
             var picture = business.picture;
             var name = business.name;
             
+            for (var j = 0; j < user.myCompanies.length; j ++) {
+                var company = user.myCompanies [j];
+                if (company == )
+            }
             
+           
+            
+         []   
         }
     }
     
