@@ -9,6 +9,9 @@
     <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
 
     <!-- enter your scripts and styles here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+		<link rel="stylesheet" href="../stylesheets/businessPage/deck.css">
+        <script src='../scripts/businessList/businessList.js'></script>
     
     <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -20,7 +23,10 @@
         padding: 0;
       }
       #map {
-        height: 100%;
+          height: 70vh;
+          height: calc(100vh - 7em);
+          width: 100%;
+          position: fixed !important;
       }
     </style>
     
@@ -43,12 +49,22 @@
         <button class='menu-toggle'><i class='fa fa-bars'></i></button>
     </header>
     <div id='main-page-content-container'>
-        
-    </div>
 
     <!-- enter your html code here -->
     
-    <div id="map"></div>
+    <div class='row'>
+        <div class="col-sm-6">
+            <div class="card-deck-wrapper">
+                <div class="card-deck">
+                </div>
+        </div>
+    </div>
+    
+    <div class='row'>
+        <div class="col-sm-6">
+            <div id="map"></div>
+        </div>
+        </div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -142,7 +158,9 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD585cQgXpC629pKIkZvjTVieJVu4xzH24&callback=initMap">
     </script>
     
+        
     <!-- enter your html code here -->
-    
+           
+    </div>
 </body>
 </html>

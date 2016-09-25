@@ -88,6 +88,14 @@ body {
     padding: 0;
 }
 
+div#main-page-content-container {
+    padding: 0 1em;
+    
+    @media (min-width: $widthWide) {
+        padding: 0 6em;
+    }
+}
+
 header#main-header {
     padding: 1em 2em;
     height: 5em;
@@ -114,7 +122,7 @@ header#main-header {
         border: none;
         font-size: 2em;
         color: $color1;
-        position: fixed;
+        position: absolute;
         top: 1em;
         right: 1em;
         cursor: pointer;
@@ -125,6 +133,8 @@ header#main-header {
         }
         
         &.toggled {
+            
+            position: fixed;
             
             i:before {
                 content: "\f00d";
