@@ -35,11 +35,13 @@ $(function() {
         console.log(window.location);
         window.location = '/RBC-NGI/pages/discover.html';
         
-        //return false;
+        return false;
     });
     
     $('#register-form').submit(function(e) {
         console.log(window.location);
         window.location = '/RBC-NGI/pages/discover.html';
+        
+        return false;
     });
 });
