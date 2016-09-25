@@ -5,9 +5,13 @@
 }
 
 .card-deck .card {
-	width: 300px;
+	width: 80%;
 	display: inline-block;
     float: right;
+    
+    @media (min-width: 700px) {
+        width: 50%;
+    }
 }
 
 .card-block .row .col-xs-6 {
