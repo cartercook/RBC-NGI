@@ -32,11 +32,17 @@
           
         });
         
-        // Let's also add a marker while we're at it
+        // Let's add markers
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(43.641195, -79.377492),
                     map: map,
-                    title: "La Carnita"
+                    title: "Miku Toronto"
+                });
+        
+                var marker2 = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.641575, -79.378195),
+                    map: map,
+                    title: "Shanghai 360"
                 });
         
         var infoWindow = new google.maps.InfoWindow({map: map});
