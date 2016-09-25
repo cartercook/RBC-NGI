@@ -31,6 +31,6 @@ $(function() {
         } else {
             console.log('null');
         }
-        return false;
+        //return false;
     });
 });
