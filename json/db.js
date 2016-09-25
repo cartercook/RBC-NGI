@@ -12,8 +12,8 @@ var database = {
 			"image": "laCarnita.jpg",
 			"location": {
 				// TODO
-				"longitude": "4",
-				"latitude": "5"
+				"longitude": "43.647157",
+				"latitude": "-79.390147"
 			},
 			"promotions": [
 				{
@@ -33,8 +33,8 @@ var database = {
 			"image": "drakeGeneralStore.jpg",
 			"location": {
 				//TODO
-				"longitude": "4",
-				"latitude": "5"
+				"longitude": "43.651916",
+				"latitude": "-79.380032"
 			},
 			"promotions": [
 				{
@@ -58,8 +58,8 @@ var database = {
 			"image": "monkeysPaw.jpg",
 			"location": {
 				//TODO
-				"longitude": "4",
-				"latitude": "5"
+				"longitude": "43.658428",
+				"latitude": "-79.441887"
 			},
 		},
 		{
@@ -73,8 +73,8 @@ var database = {
 			"image": "snakesAndLattes.jpg",
 			"location": {
 				//TODO
-				"longitude": "4",
-				"latitude": "5"
+				"longitude": "43.664788",
+				"latitude": "-79.413167"
 			},
 		}
 	],
