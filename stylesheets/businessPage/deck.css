@@ -1,6 +1,13 @@
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card-deck .card {
 	width: 300px;
 	display: inline-block;
+    float: right;
 }
 
 .card-block .row .col-xs-6 {
