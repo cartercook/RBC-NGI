@@ -1,21 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <script src="../json/db.js"></script>
-    <script src="../json/dbManager.js"></script>
-    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
+    <script src="/scripts/main.js"></script>
+    <script src="/json/db.js"></script>
+    <script src="/json/dbManager.js"></script>
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
-    <script src="../scripts/jquery/js.cookie.js"></script>
-    <script>
-        var current_username="Noam";
-        var current_password="noamj";
-    </script>
-    
+    <script src="/scripts/jquery/js.cookie.js"></script>
+
     <!-- enter your scripts and styles here -->
     
-  <title>Geolocation</title>
+    <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -28,7 +24,6 @@
         height: 100%;
       }
     </style>
-  
     
     <!-- enter your scripts and styles above -->
     
@@ -36,13 +31,14 @@
 <body>
     <header id='main-header'>
         <section class='header-image'>
-            <img src='../images/royal%20rewards%20logo.png'>
+            <img src='/images/royal%20rewards%20logo.png'>
         </section>
         <nav>
             <ul>
-                <li><a href="#">My Places</a></li>
-                <li><a href="#">Discover</a></li>
-                <li><a href="#" class='button circle'>Pay Now</a></li>
+                <li><a href="/pages/myplaces.html">My Places</a></li>
+                <li><a href="/pages/discover.html">Discover</a></li>
+                <li><a href="/pages/redeem.html" class='button circle'>Redeem Now</a></li>
+                <li><a href="#notifications" class=''><i class='fa fa-envelope-o'></i></a></li>
             </ul>
         </nav>
         <button class='menu-toggle'><i class='fa fa-bars'></i></button>
@@ -53,7 +49,7 @@
 
     <!-- enter your html code here -->
     
-  <div id="map"></div>
+    <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -149,6 +145,3 @@
     
 </body>
 </html>
-
-
-
