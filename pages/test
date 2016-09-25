@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="../json/db.js"></script>
+    <script src="../json/dbManager.js"></script>
+    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/jquery/js.cookie.js"></script>
+    <script>
+        var current_username="Noam";
+        var current_password="noamj";
+    </script>
+    
+    <!-- enter your scripts and styles here -->
+    
+  <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  
+    
+    <!-- enter your scripts and styles above -->
+    
+</head>
+<body>
+    <header id='main-header'>
+        <section class='header-image'>
+            <img src='../images/royal%20rewards%20logo.png'>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">My Places</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#" class='button circle'>Pay Now</a></li>
+            </ul>
+        </nav>
+        <button class='menu-toggle'><i class='fa fa-bars'></i></button>
+    </header>
+    <div id='main-page-content-container'>
+        
+    </div>
+
+    <!-- enter your html code here -->
+    
+  <div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 17,
+          
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+          
+        });
+        
+        var blue = "http://s17.postimg.org/cjqzhu26j/map_pointer_blue_2.png";
+        var yellow = "http://s17.postimg.org/pp6hnxw23/map_pointer_yellow_1.png";
+        // Let's add markers
+        
+        var businesses = getBusinesses();
+        
+        
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.641195, -79.377492),
+                    map: map,
+                    title: "Miku Toronto",
+                    icon: {
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
+                      url: blue
+                    }
+                });
+        
+                var marker2 = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.641575, -79.378195),
+                    map: map,
+                    title: "Shanghai 360",
+                    icon: {
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
+                      url: blue
+                    }
+                });
+        
+                var marker3 = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.647158, -79.390148),
+                    map: map,
+                    title: "La Carnita",
+                    icon: {
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
+                      url: yellow
+                    }
+                });
+        
+        var infoWindow = new google.maps.InfoWindow({map: map});
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+          
+      // end marker
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD585cQgXpC629pKIkZvjTVieJVu4xzH24&callback=initMap">
+    </script>
+    
+    <!-- enter your html code here -->
+    
+</body>
+</html>
+
+
