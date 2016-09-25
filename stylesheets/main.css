@@ -16,7 +16,11 @@ body {
 
 header#main-header {
   padding: 1em 2em;
-  height: 5em; }
+  height: 5em;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box; }
   @media (min-width: 700px) {
     header#main-header {
       padding: 1em 6em; } }
@@ -36,7 +40,8 @@ header#main-header {
     position: fixed;
     top: 1em;
     right: 1em;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 1; }
     @media (min-width: 700px) {
       header#main-header button.menu-toggle {
         display: none; } }
@@ -49,7 +54,8 @@ header#main-header {
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.98);
-    display: none; }
+    display: none;
+    z-index: 1; }
     header#main-header nav ul {
       margin: 0;
       padding: 0;
@@ -69,14 +75,20 @@ header#main-header {
           color: #002888;
           display: inline-block;
           text-decoration: none; }
-        header#main-header nav ul li a.button.secondary {
+        header#main-header nav ul li a.button {
           padding: 0.7em;
           color: #002888;
-          background: #fedf01;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          -ms-border-radius: 5px;
-          border-radius: 5px; }
+          background: #fedf01; }
+          header#main-header nav ul li a.button.secondary {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px; }
+          header#main-header nav ul li a.button.circle {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px; }
     @media (min-width: 700px) {
       header#main-header nav {
         margin: 0;
@@ -97,10 +109,6 @@ header#main-header {
             display: inline-block;
             margin: 0 1em; }
             header#main-header nav ul li:first-child {
-              margin: 0 1em 0 0; }
-            header#main-header nav ul li a {
-              color: #002888; }
-            header#main-header nav ul li a.button.secondary {
-              color: #fff; } }
+              margin: 0 1em 0 0; } }
 
 /*# sourceMappingURL=main.css.map */
