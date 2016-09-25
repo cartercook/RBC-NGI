@@ -83,16 +83,16 @@ header#main-header {
           color: #002888;
           display: inline-block;
           text-decoration: none; }
-        header#main-header nav ul li a.button {
+        header#main-header nav ul li a.button, header#main-header nav ul li button {
           padding: 0.7em;
           color: #002888;
           background: #fedf01; }
-          header#main-header nav ul li a.button.secondary {
+          header#main-header nav ul li a.button.secondary, header#main-header nav ul li button.secondary {
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             border-radius: 5px; }
-          header#main-header nav ul li a.button.circle {
+          header#main-header nav ul li a.button.circle, header#main-header nav ul li button.circle {
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
