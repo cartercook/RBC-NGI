@@ -1,0 +1,21 @@
+.hero-image {
+  padding: 2em;
+  background-image: url(../../images/front%20pic.png); }
+  @media (min-width: 600px) {
+    .hero-image {
+      padding: 6em; } }
+  .hero-image .call-to-action .hero-text {
+    font-size: 3em;
+    color: #fff; }
+  .hero-image .call-to-action a.button.secondary {
+    padding: 0.7em;
+    text-decoration: none;
+    background: #fedf01;
+    color: #002888;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block; }
+
+/*# sourceMappingURL=homepage.css.map */

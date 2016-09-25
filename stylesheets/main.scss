@@ -1,0 +1,209 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($l, $t, $r, $s, $color) {
+    -webkit-box-shadow: $l $t $r $s $color;
+       -moz-box-shadow: $l $t $r $s $color;
+            box-shadow: $l $t $r $s $color;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+      -ms-transform: translateX($x);
+          transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+      -ms-transform: translateY($y);
+          transform: translateY($y);
+}
+
+@mixin box-sizing($sizing) {
+    -webkit-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-ms-box-sizing: $sizing;
+	box-sizing: $sizing;
+}
+
+@mixin transition($t) {
+    -webkit-transition: $t;
+       -moz-transition: $t;
+            transition: $t;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+$color1: #002888;
+$color2: #fedf01;
+$widthWide: 700px;
+
+
+@font-face {
+    font-family: rbcReg;
+    src: url(../fonts/ufonts.com_meta-normal.ttf);
+}
+
+@font-face {
+    font-family: rbcBold;
+    src: url(../fonts/ufonts.com_meta-bold.ttf);
+}
+
+.rbc-font {
+    font-family: rbcReg;
+}
+
+.rbc-font-bold {
+    font-family: rbcBold;
+}
+
+body {
+    @extend .rbc-font;
+    margin: 0;
+    padding: 0;
+}
+
+header#main-header {
+    padding: 1em 2em;
+    height: 5em;
+    
+    @media (min-width: $widthWide) {
+        padding: 1em 6em;
+    }
+    
+    section.header-image {
+        height: 5em;
+        width: auto;
+        float: left;
+        
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    
+    button.menu-toggle {
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 2em;
+        color: $color1;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        cursor: pointer;
+        
+        @media (min-width: $widthWide) {
+            display: none;
+        }
+        
+        &.toggled {
+            
+            i:before {
+                content: "\f00d";
+            }
+        }
+    }
+    
+    nav {
+        
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.98);
+        display: none;
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            top: 50%;
+            @include translateY(-50%);
+            
+            li {
+                font-size: 2em;
+                display: block;
+                margin: 0;
+                padding: 1em 0;
+                text-align: center;
+                
+                a {
+                    color: $color1;
+                    display: inline-block;
+                    text-decoration: none;
+                }
+                
+                a.button.secondary {
+                    padding: 0.7em;
+                    color: $color1;
+                    background: $color2;
+                    @include border-radius(5px);
+                }
+            }
+        }
+        
+        @media (min-width: $widthWide) {
+            margin: 0;
+            float: right;
+            width: auto;
+            height: auto;
+            position: relative;
+            display: block !important;
+            
+            ul {
+                
+                position: static;
+                top: 0;
+                @include translateY(0); 
+                
+                li {
+                    font-size: 1em;
+                    text-align: left;
+                    display: inline-block;
+                    margin: 0 1em;
+                    
+                    &:first-child {
+                        margin: 0 1em 0 0;
+                    }
+                    
+                    a {
+                        color: $color1;
+                    }
+                    
+                    a.button.secondary {
+                        color: #fff;
+                    }
+                }
+                
+            }
+        }
+    }
+}

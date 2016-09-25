@@ -14,8 +14,6 @@ var database = {
                     "points": 500,
                 }
             ]
-        }
-            
         },
         {
             "id": 2,
@@ -44,8 +42,10 @@ var database = {
             "password": "noamj",
             "totalScore": 100,
             "myCompanies": [
+                {
                 "id": 1,
                 "score": 40
+                }
             ]
         },
         {

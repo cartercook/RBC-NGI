@@ -1,0 +1,89 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($l, $t, $r, $s, $color) {
+    -webkit-box-shadow: $l $t $r $s $color;
+       -moz-box-shadow: $l $t $r $s $color;
+            box-shadow: $l $t $r $s $color;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+      -ms-transform: translateX($x);
+          transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+      -ms-transform: translateY($y);
+          transform: translateY($y);
+}
+
+@mixin box-sizing($sizing) {
+    -webkit-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-ms-box-sizing: $sizing;
+	box-sizing: $sizing;
+}
+
+@mixin transition($t) {
+    -webkit-transition: $t;
+       -moz-transition: $t;
+            transition: $t;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+$color1: #002888;
+$color2: #fedf01;
+$widthWide: 600px;
+
+.hero-image {
+    padding: 2em;
+    background-image: url(../../images/front%20pic.png);
+    
+    @media (min-width: $widthWide) {
+        padding: 6em;
+    }
+    
+    .call-to-action {
+        .hero-text {
+            font-size: 3em;
+            color: #fff;
+        }
+        
+        a.button.secondary {
+            padding: 0.7em;
+            text-decoration: none;
+            background: $color2;
+            color: $color1;
+            @include border-radius(5px);
+            display: inline-block;
+        }
+    }
+}

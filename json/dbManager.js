@@ -14,12 +14,14 @@ function getCompany (name) {
             return companies[i];
         }
     }
-    return null
+    return null;
 }
 
 function getPromotions (name) {
     var company = getCompany(name);
-    if (company != null)
+    if (company != null) {
+        return company.promotions;
+    }
 }
 
 function getUsers() {
