@@ -101,6 +101,8 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
+  .button i {
+    margin-right: 1em; }
 
 .button:hover {
   color: #fff;

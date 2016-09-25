@@ -43,3 +43,6 @@ function getUser(name, password) {
     return null;
 }
 
+function getCurrentUser () {
+    return getUser(current_username, current_password);
+}

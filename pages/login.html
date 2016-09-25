@@ -4,15 +4,14 @@
     <script src="../json/db.js"></script>
     <script src="../json/dbManager.js"></script>
     <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../scripts/jquery/js.cookie.js"></script>
     <script src="../scripts/main.js"></script>
     
     <!-- enter your scripts and styles here -->
     
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     <link href='../stylesheets/login/login.css' rel='stylesheet' type='text/css'>
     <script src="../scripts/login/login.js"></script>
     
@@ -26,14 +25,16 @@
         </section>
         <nav>
             <ul>
-                <li><a href="#">For Business</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class='button secondary'>Sign Up</a></li>
+                <li><a href="/business-dashboard.html">For Business</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/login.html" class='button secondary'>Sign Up</a></li>
             </ul>
         </nav>
         <button class='menu-toggle'><i class='fa fa-bars'></i></button>
     </header>
     <div id='main-page-content-container'>
+        
+    </div>
 
     <!-- enter your html code here -->
     
@@ -55,10 +56,10 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="" method="get" role="form" style="display: block;">
-                                    <div class="form-group"><a href="#" class='button facebook'>Sign in with Facebook</a></div>
-                                    <div class="form-group"><a href="#" class='button gmail'>Sign in with Gmail</a></div>
-                                    <div class="form-group"><a href="#" class='button twitter'>Sign in with Twitter</a></div>
+								<form id="login-form" action="/RBC-NGI/pages/login.html" method="get" role="form" style="display: block;">
+                                    <div class="form-group"><a href="#" class='button facebook'><i class='fa fa-facebook'></i>Sign in with Facebook</a></div>
+                                    <div class="form-group"><a href="#" class='button gmail'><i class='fa fa-google'></i>Sign in with Google</a></div>
+                                    <div class="form-group"><a href="#" class='button twitter'><i class='fa fa-twitter'></i>Sign in with Twitter</a></div>
 									<div class="form-group">
 										<input type="text" name="username" id="username-login" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -86,10 +87,10 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="" method="get" role="form" style="display: none;">
-                                    <div class="form-group"><a href="#" class='button facebook'>Sign up with Facebook</a></div>
-                                    <div class="form-group"><a href="#" class='button gmail'>Sign up with Gmail</a></div>
-                                    <div class="form-group"><a href="#" class='button twitter'>Sign up with Twitter</a></div>
+								<form id="register-form" action="/RBC-NGI/pages/login.html" method="" role="form" style="display: none;">
+                                    <div class="form-group"><a href="#" class='button facebook'><i class='fa fa-facebook'></i>Sign up with Facebook</a></div>
+                                    <div class="form-group"><a href="#" class='button gmail'><i class='fa fa-google'></i>Sign up with Google</a></div>
+                                    <div class="form-group"><a href="#" class='button twitter'><i class='fa fa-twitter'></i>Sign up with Twitter</a></div>
 									<div class="form-group">
 										<input type="text" name="username" id="username-register" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -120,6 +121,5 @@
     
     <!-- enter your html code here -->
     
-    </div>
 </body>
 </html>

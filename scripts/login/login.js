@@ -16,21 +16,32 @@ $(function() {
 	});
     
     $('#login-form').submit(function(e) {
+//        
+//        var username = $('#username-login').val();
+//        var password = $('#password-login').val();
+//        
+//        var user = getUser(username, password);
+//        
+//        if (user != null) {
+////            createCookie('username', username, 1);
+////            createCookie('password', password, 1);
+////            console.log(username);
+////            console.log(password);
+//            //go to logged in page
+//            
+//        } else {
+//            console.log('null');
+//        }
+        console.log(window.location);
+        window.location = '/RBC-NGI/pages/discover.html';
         
-        var username = $('#username-login').val();
-        var password = $('#password-login').val();
+        return false;
+    });
+    
+    $('#register-form').submit(function(e) {
+        console.log(window.location);
+        window.location = '/RBC-NGI/pages/discover.html';
         
-        var user = getUser(username, password);
-        
-        if (user != null) {
-//            createCookie('username', username, 1);
-//            createCookie('password', password, 1);
-//            console.log(username);
-//            console.log(password);
-            //go to logged in page
-        } else {
-            console.log('null');
-        }
         return false;
     });
 });
