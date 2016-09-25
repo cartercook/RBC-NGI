@@ -32,11 +32,14 @@ $(function() {
 //        } else {
 //            console.log('null');
 //        }
-        window.location.href = '/RBC-NGI/pages/discover.html';
+        console.log(window.location);
+        window.location = '/RBC-NGI/pages/discover.html';
+        
         //return false;
     });
     
     $('#register-form').submit(function(e) {
-        window.location.href = '/RBC-NGI/pages/discover.html';
+        console.log(window.location);
+        window.location = '/RBC-NGI/pages/discover.html';
     });
 });
