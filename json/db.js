@@ -83,7 +83,7 @@ var database = {
 			"totalScore": 100,
 			"myCompanies": [
                 {
-                    "id": 1,
+                    "id": "1",
                     "score": 40
                 }
 			]
