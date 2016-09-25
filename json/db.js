@@ -26,7 +26,7 @@ var database = {
 			"description": "A traditional hotel gift shop, a classic general store, a flea market stand, and a museum shop all rolled into one.",
 			"address": "1151 Queen St W, Toronto, ON M6J",
 			"phone":"(647) 346-0742",
-			"website": "http://www.drakegeneralstore.ca/"
+			"website": "http://www.drakegeneralstore.ca/",
 			"hours":"Saturday	10AM–9PM\nSunday	11AM–6PM\nMonday	10AM–9PM\nTuesday	10AM–9PM\nWednesday	10AM–9PM\nThursday	10AM–9PM\nFriday	10AM–9PM",
 			"image": "drakeGeneralStore.jpg",
 			"location": {
