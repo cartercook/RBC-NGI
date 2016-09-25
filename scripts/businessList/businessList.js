@@ -55,7 +55,7 @@ $(document).ready(function () {
             
             var $cardClone = $card.clone();
             $cardClone.find('div.card-background').css('background-image', 'url(' + picture + '), linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1))');
-            $cardClone.find('div.promotionValue').html("<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $" + dollarsPerPoint + "</div>");
+            $cardClone.find('div.promotionValue').html("1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $" + dollarsPerPoint);
             $cardClone.find('h4').html(name);
             $cardClone.find('h5').html(tags);
             

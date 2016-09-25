@@ -65,9 +65,10 @@
   float: right;
   width: 70%;
   z-index: 1;
-  margin: 0 1em 2em 0; }
+  margin: 0.5em 1em 2em 0; }
 
 .card .heart {
+  z-index: 2;
   position: absolute;
   font-size: 3em;
   top: 0em;

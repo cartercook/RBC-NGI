@@ -10,7 +10,7 @@ var database = {
 			"phone": "(416) 964-1555",
 			"website": "www.lacarnita.com/",
 			"hours": "Saturday	5–11PM\nSunday	5–10PM\nMonday	5–10PM\nTuesday	5–11PM\nWednesday	5–11PM\nThursday	5–11PM\nFriday	5–11PM",
-			"image": "laCarnita.jpg",
+			"image": "La%20Carnita%20bg.png",
 			"location": {
 				"longitude": "43.647157",
 				"latitude": "-79.390147"
