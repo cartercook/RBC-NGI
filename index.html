@@ -1,7 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="../json/db.js"></script>
+    <script src="../json/dbManager.js"></script>
+    <link href="../stylesheets/main.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/jquery/js.cookie.js"></script>
+    <script>
+        var current_username="Noam";
+        var current_password="noamj";
+    </script>
+    
+    <!-- enter your scripts and styles here -->
+    
+  <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -14,9 +28,32 @@
         height: 100%;
       }
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
+  
+    
+    <!-- enter your scripts and styles above -->
+    
+</head>
+<body>
+    <header id='main-header'>
+        <section class='header-image'>
+            <img src='../images/royal%20rewards%20logo.png'>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">My Places</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#" class='button circle'>Pay Now</a></li>
+            </ul>
+        </nav>
+        <button class='menu-toggle'><i class='fa fa-bars'></i></button>
+    </header>
+    <div id='main-page-content-container'>
+        
+    </div>
+
+    <!-- enter your html code here -->
+    
+  <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -35,6 +72,10 @@
         var blue = "http://s17.postimg.org/cjqzhu26j/map_pointer_blue_2.png";
         var yellow = "http://s17.postimg.org/pp6hnxw23/map_pointer_yellow_1.png";
         // Let's add markers
+        
+        var businesses = getBusinesses();
+        
+        
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(43.641195, -79.377492),
                     map: map,
@@ -103,5 +144,11 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD585cQgXpC629pKIkZvjTVieJVu4xzH24&callback=initMap">
     </script>
-  </body>
+    
+    <!-- enter your html code here -->
+    
+</body>
 </html>
+
+
+
