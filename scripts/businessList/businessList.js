@@ -3,7 +3,7 @@ $(document).ready(function () {
     function populateBusinessCards() {
         var $cardDeck = $('div.card-deck');
         
-        var $card = $("<div class='card'>" +
+        var $card = $("<a href='RBC-NGI/pages/lacarnita.html'><div class='card'>" +
                         "<div class='card-background'></div>" +
                         "<div class='card-overlay'>" +
                             "<div class='promotionValue'>1<img src='../images/Shape%202-1.png' style='transform: translateY(-2px);'> / $10</div>" +
@@ -15,7 +15,7 @@ $(document).ready(function () {
                             "</div>" +
                             "<button class='heart'><i class='fa fa-heart'></i></button>" +
                        "</div>" +
-                    "</div>");
+                    "</div></a>");
         var $progressBar = $("<div class='progress-bar'>" +
                 "<div class='text-cost'>5 <img src='../images/Shape%202.png' style='transform: translateY(-2px);'> /Taco</div>" +
                 "<div class='inner-progress'></div>" +
