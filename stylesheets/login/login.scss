@@ -164,11 +164,16 @@ $color2: #fedf01;
     display: block;
     color: #fff;
     @include border-radius(5px);
+    i {
+        margin-right: 1em;
+    }
 }
 
 .button:hover {
     color: #fff;
     cursor: pointer;
+    
+    
 }
 
 .button.facebook {
@@ -182,3 +187,4 @@ $color2: #fedf01;
 .button.gmail {
     background: #dd4b39;
 }
+

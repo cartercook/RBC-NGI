@@ -1,4 +1,5 @@
-var current_user_id;
+var current_username = 'Noam';
+var current_password = 'noamj';
 
 $(document).ready(function (){
    

@@ -33,6 +33,10 @@ function createUser() {
     var users = getDatabase().users;
 }
 
+function getCurrentUser () {
+    return getUser(current_username, current_password);
+}
+
 function getUser(name, password) {
     var users = getUsers();
     for (var i = 0; i < users.length; i ++) {
@@ -41,5 +45,9 @@ function getUser(name, password) {
         }
     }
     return null;
+}
+
+function getCurrentUser () {
+    
 }
 

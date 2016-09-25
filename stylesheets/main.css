@@ -7,7 +7,7 @@
 .rbc-font, body {
   font-family: rbcReg; }
 
-.rbc-font-bold {
+.rbc-font-bold, header#main-header nav {
   font-family: rbcBold; }
 
 body {
