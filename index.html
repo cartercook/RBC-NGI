@@ -40,8 +40,8 @@
                     map: map,
                     title: "Miku Toronto",
                     icon: {
-                      size: new google.maps.Size(200, 200),
-                      scaledSize: new google.maps.Size(200, 200),
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
                       url: blue
                     }
                 });
@@ -50,14 +50,22 @@
                     position: new google.maps.LatLng(43.641575, -79.378195),
                     map: map,
                     title: "Shanghai 360",
-                    icon: blue
+                    icon: {
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
+                      url: blue
+                    }
                 });
         
                 var marker3 = new google.maps.Marker({
                     position: new google.maps.LatLng(43.647158, -79.390148),
                     map: map,
                     title: "La Carnita",
-                    icon: yellow
+                    icon: {
+                      size: new google.maps.Size(40, 51),
+                      scaledSize: new google.maps.Size(40, 51),
+                      url: yellow
+                    }
                 });
         
         var infoWindow = new google.maps.InfoWindow({map: map});
