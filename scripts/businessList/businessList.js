@@ -10,6 +10,7 @@ $(document).ready(function () {
 					'<div class="col-xs-6">' +
 						'<div class="text-xs-center"></div>' + 
 						'<progress class="progress" max="500"></progress>' +
+                        '<div class="heart-it"></div>' +
 					'</div>' +
 				'</div>' +
 			'</div>');
@@ -41,5 +42,20 @@ $(document).ready(function () {
     }
     
     populateBusinessCards();
+    
+    function init_hearting (){
+        $('.heart').click(function () {
+            var $i = $(this).find('i');
+            if ($i.hasClass('fa-heart')) {
+                $i.addClass('fa-heart-o');
+                $i.removeClass('fa-heart');
+            } else {
+                $i.addClass('fa-heart');
+                $i.removeClass('fa-heart-o');
+            }
+        });
+    }
+    
+    init_hearting();
     
 });
