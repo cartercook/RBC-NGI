@@ -32,23 +32,30 @@
           
         });
         
+        var blue = "http://s11.postimg.org/jev6uds9b/map_pointer_blue.png"
+        
+        var yellow = "http://s11.postimg.org/5z864xjrj/map_pointer_yellow.png"
+        
         // Let's add markers
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(43.641195, -79.377492),
                     map: map,
-                    title: "Miku Toronto"
+                    title: "Miku Toronto",
+                    icon: blue
                 });
         
                 var marker2 = new google.maps.Marker({
                     position: new google.maps.LatLng(43.641575, -79.378195),
                     map: map,
-                    title: "Shanghai 360"
+                    title: "Shanghai 360",
+                    icon: blue
                 });
         
                 var marker3 = new google.maps.Marker({
                     position: new google.maps.LatLng(43.647158, -79.390148),
                     map: map,
                     title: "La Carnita"
+                    icon: yellow
                 });
         
         var infoWindow = new google.maps.InfoWindow({map: map});
