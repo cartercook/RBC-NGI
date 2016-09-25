@@ -23,6 +23,10 @@ $(function() {
         var user = getUser(username, password);
         
         if (user != null) {
+//            createCookie('username', username, 1);
+//            createCookie('password', password, 1);
+//            console.log(username);
+//            console.log(password);
             //go to logged in page
         } else {
             console.log('null');
