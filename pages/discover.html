@@ -170,9 +170,10 @@
 		
 	//marker listener start
 		
-	 marker.addListener('click', function() {
-          $('#myModal').modal('toggle');
-        });
+	 google.maps.event.addListener(marker, 'click', function() {
+    $('#myModal').modal('show');
+	console.log($("#myModal"));
+});
 		
 	//marker listener end
 		
