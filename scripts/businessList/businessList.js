@@ -24,7 +24,9 @@ $(document).ready(function () {
             
             for (var j = 0; j < user.myCompanies.length; j ++) {
                 var company = user.myCompanies [j];
-                if (company == )
+                if (company.id == business.id) {
+                    
+                }
             }
             
            

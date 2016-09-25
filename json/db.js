@@ -2,6 +2,7 @@ var database = {
 	
 	"companies": [
 		{
+            "id": "1",
 			"name": "La Carnita",
 			"description": "Former mobile street-food spot now in a fixed space, offering a small menu of creative tacos & art.",
 			"address": "501 College St, Toronto, ON M6G 1A5",
@@ -22,6 +23,7 @@ var database = {
 			]
 		},
 		{
+            "id": "2",
 			"name": "Drake General Store",
 			"description": "A traditional hotel gift shop, a classic general store, a flea market stand, and a museum shop all rolled into one.",
 			"address": "1151 Queen St W, Toronto, ON M6J",
@@ -46,6 +48,7 @@ var database = {
 			]
 		},
 		{
+            "id": "3",
 			"name": "Monkey's Paw Bookstore",
 			"description": "Funky store featuring rare & unique 20th-century printed items, with a used-book vending machine.",
 			"address": "1267 Bloor St W, Toronto, ON M6H 1N7",
@@ -60,6 +63,7 @@ var database = {
 			},
 		},
 		{
+            "id": "4",
 			"name": "Snakes and Lattes",
 			"description": "Lively cafe with a huge collection of board & card games, plus sandwiches, salads & drinks.",
 			"address": "600 Bloor St W, Toronto, ON M6G 1K4",
