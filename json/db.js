@@ -11,7 +11,6 @@ var database = {
 			"hours": "Saturday	5–11PM\nSunday	5–10PM\nMonday	5–10PM\nTuesday	5–11PM\nWednesday	5–11PM\nThursday	5–11PM\nFriday	5–11PM",
 			"image": "laCarnita.jpg",
 			"location": {
-				// TODO
 				"longitude": "43.647157",
 				"latitude": "-79.390147"
 			},
@@ -32,7 +31,6 @@ var database = {
 			"hours":"Saturday	10AM–9PM\nSunday	11AM–6PM\nMonday	10AM–9PM\nTuesday	10AM–9PM\nWednesday	10AM–9PM\nThursday	10AM–9PM\nFriday	10AM–9PM",
 			"image": "drakeGeneralStore.jpg",
 			"location": {
-				//TODO
 				"longitude": "43.651916",
 				"latitude": "-79.380032"
 			},
@@ -57,7 +55,6 @@ var database = {
 			"hours":"Saturday	11AM–7PM\nSunday	12–5PM\nMonday	Closed\nTuesday	11AM–7PM\nWednesday	11AM–7PM\nThursday	11AM–7PM\nFriday	11AM–7PM",
 			"image": "monkeysPaw.jpg",
 			"location": {
-				//TODO
 				"longitude": "43.658428",
 				"latitude": "-79.441887"
 			},
@@ -72,7 +69,6 @@ var database = {
 			"hours": "Saturday	11AM–2AM\nSunday	11AM–12AM\nMonday	11AM–12AM\nTuesday	11AM–12AM\nWednesday	11AM–12AM\nThursday	11AM–12AM\nFriday	11AM–2AM",
 			"image": "snakesAndLattes.jpg",
 			"location": {
-				//TODO
 				"longitude": "43.664788",
 				"latitude": "-79.413167"
 			},
